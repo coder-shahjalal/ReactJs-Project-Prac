@@ -5,7 +5,7 @@ const App = () => {
   const [numberAllowed, setnumberAllowed] = useState(false);
   const [caratorAllowed, setcaratorAllowed] = useState(false);
   const [password, setpassword] = useState(false);
-  con
+  const passwordGenerator = () => {}
   return (
     <>
     <h1 className='text-4xl text-center text-white'>
