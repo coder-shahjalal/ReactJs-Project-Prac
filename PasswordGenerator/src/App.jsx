@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from "react";
 
 const App = () => {
   const [length, setLength] = useState(8);
@@ -8,8 +8,8 @@ const App = () => {
   const passwordGenerator = () => {}
   return (
     <>
-    <h1 className='text-4xl text-center text-white'>
-     Password Generator
+    <h1 className='text-4xl text-center text-white bg-zinc-800'>
+    Password Generator
     </h1>
     </>
   )
