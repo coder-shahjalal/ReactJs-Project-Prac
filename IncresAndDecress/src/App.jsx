@@ -4,10 +4,11 @@ const App = () => {
   const [data, setData] = useState(0);
 
   const increaseHandle = () => {
-    setData(data + 1);
+    setData((prev) => (prev < 100 ? prev + 1 : prev));
   };
+
   const decreaseHandle = () => {
-    setData(data - 1);
+    setData((prev) => (prev > 0 ? prev - 1 : prev));
   };
   return (
     <>
