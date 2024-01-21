@@ -1,17 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import { MyContextProvider, ThemeProvider } from './context/CreateContext'
+import Home from "./components/Home";
+import { MyContextProvider } from "./contexts/MyContext";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <MyContextProvider>
-        <ThemeProvider>
-              <h2 className='flex justify-center text-3xl text-white bg-slate-500'> tailwindcss </h2>
-        </ThemeProvider>
-    </MyContextProvider>
-  )
+    <div className="flex flex-col items-center justify-center mt-10 text-3xl">
+      <MyContextProvider>
+        <Home/>
+        
+      </MyContextProvider>
+    </div>
+  );
 }
 
-export default App
+export default App;
