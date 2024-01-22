@@ -4,21 +4,21 @@ function Header() {
   const { user, setUser } = useMyContext();
 
   return (
-    <div>
-      <h1>{user}</h1>
+    <div className="flex flex-col w-[70%] gap-2 m-auto mb-2">
+      <h1 className="text-5xl font-bold">{user}</h1>
       <button
         onClick={() => setUser(user + 1)}
-        className="px-10 rounded-lg bt-2 bg-slate-400 py-15"
+        className="bg-green-500 rounded-lg px-[5px] button-2 bt-2 py-[8px] font-semibold hover:bg-green-700 hover:text-white "
       >
-        Add Number
+        Incress
       </button>
 
 
       <button
-        onClick={() => setUser(user - 1)}
-        className="px-10 rounded-lg bt-2 bg-slate-400 py-15"
+        onClick={() => user>=!0? setUser(user - 1): null}
+        className="bg-red-500 rounded-lg px-[5px] button-2 bt-2 font-semibold py-[8px] hover:bg-red-700 hover:text-white"
       >
-        reduce Number
+        Decress
       </button>
     </div>
   );
