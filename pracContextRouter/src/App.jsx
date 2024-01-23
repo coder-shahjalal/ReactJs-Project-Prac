@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import Home from "./components/Home";
-import { MyContextProvider } from "./contexts/MyContext";
-
 import Card from "./components/Card";
+import Home from "./components/Home";
 import ThemeBtn from "./components/ThemeBtn";
+import { MyContextProvider } from "./contexts/MyContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
