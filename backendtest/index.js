@@ -1,5 +1,6 @@
 require('dotenv').config()
 const express = require('express')
+const path = require('path')
 const app = express()
 const port = 4000
 
@@ -11,7 +12,7 @@ res.send('shahjalal geo')
 })
 
 app.get('/login',(req,res)=>{
-    res.send('<h1>shahjalal login</h1>')
+    res.sendFile(path.join(__dirname, '/index.html'));
 })
 
 app.get('/youtube',(req,res)=>{
