@@ -1,23 +1,23 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { removeTodo } from '../features/todo/todoSlice'
+import { useDispatch, useSelector } from "react-redux";
+import { removeTodo } from "../features/todo/todoSlice";
 
 function Todos() {
-    const todos = useSelector(state => state.todos)
-    const dispatch = useDispatch()
+  const todos = useSelector((state) => state.todos);
+  const dispatch = useDispatch();
 
   return (
     <>
-    <div>Todos</div>
-    <ul className="list-none">
+      <div>Todos</div>
+
+      <ul className="list-none w-full h-screen flex flex-col items-center">
         {todos.map((todo) => (
           <li
-            className="flex items-center justify-between px-4 py-2 mt-4 rounded bg-zinc-800"
+            className="flex items-center justify-between px-4 py-2 mt-4 rounded-full bg-zinc-800 w-1/2"
             key={todo.id}
           >
-            <div className='text-white'>{todo.text}</div>
+            <div className="text-white">{todo.text}</div>
             <button
-             onClick={() => dispatch(removeTodo(todo.id))}
+              onClick={() => dispatch(removeTodo(todo.id))}
               className="px-4 py-1 text-white bg-red-500 border-0 rounded focus:outline-none hover:bg-red-600 text-md"
             >
               <svg
@@ -39,7 +39,7 @@ function Todos() {
         ))}
       </ul>
     </>
-  )
+  );
 }
 
-export default Todos
+export default Todos;
