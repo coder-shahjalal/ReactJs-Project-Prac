@@ -5,7 +5,7 @@ const app = express()
 const port = 4000
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.sendFile(path.join(__dirname, './dist/index.html'));
 })
 app.get('/geo',(req,res)=>{
 res.send('shahjalal geo')
