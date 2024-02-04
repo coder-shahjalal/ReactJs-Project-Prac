@@ -41,9 +41,19 @@ return await this.account.createEmailSession(email,password);
             throw error
         }
 
-        return null;
+        return null; 
+    }
+
+    async logout () {
+        try{
+            return await this.account.deleteSessions()
+        }catch(error){
+            throw error
+        }
     }
 }
+
+
 
 const authService = new AuthService(
    
