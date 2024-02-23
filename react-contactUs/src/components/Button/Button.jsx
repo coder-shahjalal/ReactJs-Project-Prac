@@ -1,12 +1,16 @@
-import { MdMessage } from "react-icons/md";
 import styles from "./Button.module.css";
+const Button = ({isOutline,icon,text,onClick}) => {
+  
+  
 
-const Button = () => {
-  console.log(styles);
   return (
-    <button className={styles.primary_btn}>
-      <MdMessage />
-      Button
+    <button 
+    onClick={onClick}
+    className={isOutline ? styles.outline_btn:styles.primary_btn}
+    >
+      {icon}
+      {text}
+      
     </button>
   );
 };
